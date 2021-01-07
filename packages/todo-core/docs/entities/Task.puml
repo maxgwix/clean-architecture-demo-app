@@ -1,0 +1,23 @@
+@startuml
+
+interface Task {
+    string title
+    string[] tags
+    Priority priority
+    Status status
+}
+
+enum Priority {
+    LOW
+    MEDIUM
+    HIGH
+}
+enum Status {
+    TODO
+    DONE
+}
+
+Status <- Task
+Priority <- Task
+
+@enduml
